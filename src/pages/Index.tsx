@@ -4,13 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
-import { Play, Zap, Target, Users, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Play } from "lucide-react";
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +19,7 @@ const Index = () => {
     company: "",
     country: "",
     hasApp: "",
+    hearAboutUs: "",
     marketingNeeds: [] as string[],
     message: "",
     newsletter: false
@@ -48,6 +48,11 @@ const Index = () => {
   const countries = [
     "United States", "United Kingdom", "Canada", "Germany", "France", "Japan", 
     "Australia", "Netherlands", "Sweden", "Israel", "Singapore", "Other"
+  ];
+
+  const hearAboutOptions = [
+    "Google Search", "Social Media", "Word of Mouth", "Industry Event", 
+    "Partner Referral", "Content/Blog", "Advertisement", "Other"
   ];
 
   const marketingOptions = [
@@ -86,43 +91,69 @@ const Index = () => {
           <div className="space-y-8 text-white">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Turn static ads into{" "}
+                AI-powered{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  interactive experiences
+                  interactive ads
                 </span>{" "}
                 in minutes
               </h1>
               
               <p className="text-xl text-slate-300 leading-relaxed">
-                Skip the complex workflows. Generate high-performing playable ads with AI, 
-                test instantly, and scale what works—all without touching code.
+                No code. Fast launch. High performance.
               </p>
               
               <p className="text-slate-400">
-                Marketing teams at top mobile brands use our Flex and Ready tools to create 
-                interactive ad versions 10x faster than traditional methods. No technical skills 
-                required, no credit card needed to start.
+                Turn static creatives into engaging playable ads with AI. 
+                Test instantly and scale what works.
               </p>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="space-y-6">
+            {/* Client Logos */}
+            <div className="space-y-4">
               <div className="text-sm text-slate-400">
-                Trusted by over 400 apps worldwide
+                Trusted by leading brands worldwide
               </div>
               
-              <div className="grid grid-cols-3 gap-8 pt-4">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">10x</div>
-                  <div className="text-sm text-slate-400">Faster Creation</div>
+              <div className="grid grid-cols-3 gap-8 items-center opacity-60">
+                {/* Top row - 3 logos */}
+                <div className="flex items-center justify-center h-12">
+                  <img 
+                    src="/lovable-uploads/85635f9e-929a-4117-9ef9-2ce5b1507d88.png" 
+                    alt="McDonald's" 
+                    className="h-8 w-auto filter brightness-0 invert"
+                  />
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">85%</div>
-                  <div className="text-sm text-slate-400">Time Saved</div>
+                <div className="flex items-center justify-center h-12">
+                  <img 
+                    src="/lovable-uploads/eb9dce1b-a19c-4703-9c66-82ee8b1624d7.png" 
+                    alt="MiniClip" 
+                    className="h-8 w-auto filter brightness-0 invert"
+                  />
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">3x</div>
-                  <div className="text-sm text-slate-400">Better CTR</div>
+                <div className="flex items-center justify-center h-12">
+                  <img 
+                    src="/lovable-uploads/a78883a7-a800-469e-87a7-95ffa64d1dc4.png" 
+                    alt="Rovio" 
+                    className="h-8 w-auto filter brightness-0 invert"
+                  />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-8 items-center opacity-60 max-w-md mx-auto">
+                {/* Bottom row - 2 logos */}
+                <div className="flex items-center justify-center h-12">
+                  <img 
+                    src="/lovable-uploads/087297e8-61a8-4f13-bc9f-790f74bcd530.png" 
+                    alt="Supercell" 
+                    className="h-8 w-auto filter brightness-0 invert"
+                  />
+                </div>
+                <div className="flex items-center justify-center h-12">
+                  <img 
+                    src="/lovable-uploads/70cfa843-1b7b-4764-815f-206f0430617f.png" 
+                    alt="Zynga" 
+                    className="h-8 w-auto filter brightness-0 invert"
+                  />
                 </div>
               </div>
             </div>
@@ -135,10 +166,10 @@ const Index = () => {
                 <div className="space-y-6">
                   <div className="text-center space-y-2">
                     <h2 className="text-2xl font-bold text-gray-900">
-                      Request a Demo!
+                      Request a Demo
                     </h2>
                     <p className="text-gray-600">
-                      Share your information and request a demo. Your journey to excellence starts now!
+                      Get started with AI-powered interactive ads today
                     </p>
                   </div>
 
@@ -232,6 +263,24 @@ const Index = () => {
                       </Select>
                     </div>
 
+                    <div className="space-y-2">
+                      <Label htmlFor="hearAboutUs" className="text-sm font-medium text-gray-700">
+                        How did you hear about us?
+                      </Label>
+                      <Select onValueChange={(value) => setFormData(prev => ({ ...prev, hearAboutUs: value }))}>
+                        <SelectTrigger className="h-12 border-gray-200 focus:ring-blue-500 focus:border-blue-500">
+                          <SelectValue placeholder="Select an option" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {hearAboutOptions.map((option) => (
+                            <SelectItem key={option} value={option}>
+                              {option}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </div>
+
                     <div className="space-y-3">
                       <Label className="text-sm font-medium text-gray-700">
                         What can we help you with? <span className="text-blue-600">*</span>
@@ -282,10 +331,6 @@ const Index = () => {
                     >
                       Request a demo
                     </Button>
-
-                    <p className="text-xs text-gray-500 text-center">
-                      Reach out and get started today. No credit card required.
-                    </p>
                   </form>
                 </div>
               </CardContent>
