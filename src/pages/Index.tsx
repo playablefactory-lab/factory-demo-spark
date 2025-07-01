@@ -57,41 +57,19 @@ const Index = () => {
     );
   }
 
-   return (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-    <div className="container mx-auto px-8 py-12 lg:py-16 max-w-7xl">
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
-
-        {/* Left Column - Hero Content */}
-        <div className="space-y-12 text-white lg:pr-6">
-          
-          {/* Logo aligned with text */}
-          <div className="mb-6">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-8 py-12 lg:py-16 max-w-7xl">
+        {/* Centered Logo */}
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center mb-10">
             <img 
               src="/lovable-uploads/6599fa57-966c-4934-8890-aad65967a43f.png" 
               alt="Playable Factory" 
               className="h-10 w-auto"
             />
           </div>
-
-          <div className="space-y-6">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-              Create Playables That Perform
-            </h1>
-            <p className="text-lg text-slate-300">
-              Generate stunning, high-impact interactive ads in minutes with AI-powered tools—no design or code needed.
-            </p>
-          </div>
         </div>
-
-        {/* Right Column - Form will be here */}
-        {/* ... */}
-
-      </div>
-    </div>
-  </div>
-);
-
 
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
           {/* Left Column - Hero Content */}
