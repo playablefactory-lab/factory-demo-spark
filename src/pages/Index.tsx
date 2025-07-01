@@ -14,10 +14,10 @@ const Index = () => {
     email: "",
     message: "",
     hearAboutUs: "",
-    newsletter: false
+    newsletter: true
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,14 +80,14 @@ const Index = () => {
               </h1>
               
               <p className="text-xl text-white leading-relaxed">
-                Generate stunning, high-impact interactive ads in minutes with AI-powered tools—no design or code needed.
+                Generate stunning, high-impact interactive ads.
               </p>
             </div>
 
             {/* Client Logos */}
             <div className="space-y-6">
               <div className="text-base text-white">
-                Trusted by leading brands worldwide
+                Trusted by 400+ companies worldwide
               </div>
               
               <div className="grid grid-cols-3 gap-12 items-center">
@@ -145,7 +145,7 @@ const Index = () => {
                       Request a Demo
                     </h2>
                     <p className="text-gray-600 text-base">
-                      Get started with AI-powered interactive ads today
+                      Get started with interactive ads today
                     </p>
                   </div>
 
@@ -165,36 +165,32 @@ const Index = () => {
                       />
                     </div>
 
-                    <div className="space-y-1.5">
-                      <Label htmlFor="hearAboutUs" className="text-sm font-medium text-gray-700">
-                        How did you hear about us? <span className="text-orange-600">*</span>
-                      </Label>
-                      <Select onValueChange={(value) => setFormData(prev => ({ ...prev, hearAboutUs: value }))}>
-                        <SelectTrigger className="h-11 border-gray-200 focus:ring-orange-500 focus:border-orange-500">
-                          <SelectValue placeholder="Select an option" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {hearAboutOptions.map((option) => (
-                            <SelectItem key={option} value={option}>
-                              {option}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
+                   <div className="space-y-1.5">
+  <Label htmlFor="message" className="text-sm font-medium text-gray-700">
+    Your Message (optional)
+  </Label>
+  <Textarea
+    id="message"
+    placeholder="Tell us about your project or any specific requirements"
+    value={formData.message}
+    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+    className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
+  />
+</div>
 
-                    <div className="space-y-1.5">
-                      <Label htmlFor="message" className="text-sm font-medium text-gray-700">
-                        Your Message (optional)
-                      </Label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us about your project or any specific requirements"
-                        value={formData.message}
-                        onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                        className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
-                      />
-                    </div>
+<div className="space-y-1.5">
+  <Label htmlFor="hearAboutUs" className="text-sm font-medium text-gray-700">
+    How did you hear about us? <span className="text-orange-600">*</span>
+  </Label>
+  <Textarea
+    id="hearAboutUs"
+    placeholder="Let us know how you discovered Playable Factory"
+    value={formData.hearAboutUs}
+    onChange={(e) => setFormData(prev => ({ ...prev, hearAboutUs: e.target.value }))}
+    className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
+  />
+</div>
+
 
                     <div className="flex items-center space-x-2.5">
                       <Checkbox
