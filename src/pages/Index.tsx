@@ -59,10 +59,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-6 py-16 lg:py-24 max-w-7xl">
+      <div className="container mx-auto px-8 py-20 lg:py-28 max-w-7xl">
         {/* Centered Logo */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-12">
+        <div className="text-center mb-20">
+          <div className="flex items-center justify-center mb-16">
             <img 
               src="/lovable-uploads/6599fa57-966c-4934-8890-aad65967a43f.png" 
               alt="Playable Factory" 
@@ -71,29 +71,26 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-start max-w-6xl mx-auto">
           {/* Left Column - Hero Content */}
-          <div className="space-y-12 text-white">
+          <div className="space-y-16 text-white lg:pr-8">
             <div className="space-y-8">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Turn static ads into{" "}
-                <span className="bg-gradient-to-r from-orange-400 to-orange-500 bg-clip-text text-transparent">
-                  interactive experiences
-                </span>
+                Create Playables That Perform
               </h1>
               
               <p className="text-2xl text-white leading-relaxed">
-                Create high-performing playables with AI. No code, no friction.
+                Generate stunning, high-impact interactive ads in minutes with AI-powered tools—no design or code needed.
               </p>
             </div>
 
             {/* Client Logos */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="text-lg text-white">
                 Trusted by leading brands worldwide
               </div>
               
-              <div className="grid grid-cols-3 gap-12 items-center">
+              <div className="grid grid-cols-3 gap-16 items-center">
                 {/* Top row - 3 logos */}
                 <div className="flex items-center justify-center h-16">
                   <img 
@@ -118,7 +115,7 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-12 items-center max-w-sm mx-auto">
+              <div className="grid grid-cols-2 gap-16 items-center max-w-sm mx-auto">
                 {/* Bottom row - 2 logos */}
                 <div className="flex items-center justify-center h-16">
                   <img 
@@ -139,11 +136,11 @@ const Index = () => {
           </div>
 
           {/* Right Column - Demo Form */}
-          <div className="lg:pl-12">
+          <div className="lg:pl-16">
             <Card className="shadow-2xl border-0 bg-white">
-              <CardContent className="p-10">
+              <CardContent className="p-12">
                 <div className="space-y-8">
-                  <div className="text-center space-y-3">
+                  <div className="text-center space-y-4">
                     <h2 className="text-3xl font-bold text-gray-900">
                       Request a Demo
                     </h2>
@@ -207,7 +204,7 @@ const Index = () => {
                         className="data-[state=checked]:bg-orange-600 data-[state=checked]:border-orange-600"
                       />
                       <Label htmlFor="newsletter" className="text-sm text-gray-700">
-                        ✅ Keep me updated with newsletter and product updates
+                        Keep me updated with newsletter and product updates
                       </Label>
                     </div>
 
