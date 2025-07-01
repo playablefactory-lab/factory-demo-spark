@@ -61,21 +61,17 @@ const Index = () => {
     return (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
     <div className="container mx-auto px-8 py-12 lg:py-16 max-w-7xl">
-      
-      {/* Grid Layout */}
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
 
-        {/* Left Column - Hero Content */}
-        <div className="space-y-12 text-white lg:pr-6">
-          
-          {/* Logo above text, aligned with text */}
-          <div className="mb-6">
-            <img 
-              src="/lovable-uploads/6599fa57-966c-4934-8890-aad65967a43f.png" 
-              alt="Playable Factory" 
-              className="h-10 w-auto"
-            />
-          </div>
+      {/* Left-aligned Logo */}
+      <div className="mb-12">
+        <div className="flex items-center mb-10">
+          <img 
+            src="/lovable-uploads/6599fa57-966c-4934-8890-aad65967a43f.png" 
+            alt="Playable Factory" 
+            className="h-10 w-auto"
+          />
+        </div>
+      </div>
 
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
           {/* Left Column - Hero Content */}
