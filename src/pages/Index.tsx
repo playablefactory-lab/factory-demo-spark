@@ -58,167 +58,161 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-8 py-12 lg:py-16 max-w-7xl">
-        {/* Centered Logo */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-10">
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="container mx-auto px-8 py-12 lg:py-16 max-w-7xl">
+      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
+
+        {/* Left Column - Hero Content */}
+        <div className="space-y-12 text-white lg:pr-6">
+
+          {/* Logo */}
+          <div className="mb-6">
             <img 
               src="/lovable-uploads/6599fa57-966c-4934-8890-aad65967a43f.png" 
               alt="Playable Factory" 
               className="h-10 w-auto"
             />
           </div>
+
+          <div className="space-y-6">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              Create Playables That Perform
+            </h1>
+            <p className="text-xl text-white leading-relaxed">
+              Generate stunning, high-impact interactive ads.
+            </p>
+          </div>
+
+          {/* Client Logos */}
+          <div className="space-y-6">
+            <div className="text-base text-white">
+              Trusted by 400+ companies worldwide
+            </div>
+            <div className="grid grid-cols-3 gap-12 items-center">
+              <div className="flex items-center justify-center h-12">
+                <img 
+                  src="/lovable-uploads/85635f9e-929a-4117-9ef9-2ce5b1507d88.png" 
+                  alt="McDonald's" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
+              <div className="flex items-center justify-center h-12">
+                <img 
+                  src="/lovable-uploads/eb9dce1b-a19c-4703-9c66-82ee8b1624d7.png" 
+                  alt="MiniClip" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
+              <div className="flex items-center justify-center h-12">
+                <img 
+                  src="/lovable-uploads/a78883a7-a800-469e-87a7-95ffa64d1dc4.png" 
+                  alt="Rovio" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-12 items-center max-w-sm mx-auto">
+              <div className="flex items-center justify-center h-12">
+                <img 
+                  src="/lovable-uploads/087297e8-61a8-4f13-bc9f-790f74bcd530.png" 
+                  alt="Supercell" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
+              <div className="flex items-center justify-center h-12">
+                <img 
+                  src="/lovable-uploads/70cfa843-1b7b-4764-815f-206f0430617f.png" 
+                  alt="Zynga" 
+                  className="h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start max-w-6xl mx-auto">
-          {/* Left Column - Hero Content */}
-          <div className="space-y-12 text-white lg:pr-6">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Create Playables That Perform
-              </h1>
-              
-              <p className="text-xl text-white leading-relaxed">
-                Generate stunning, high-impact interactive ads.
-              </p>
-            </div>
+        {/* Right Column - Demo Form */}
+        <div className="lg:pl-12">
+          <Card className="shadow-2xl border-0 bg-white">
+            <CardContent className="p-8">
+              <div className="space-y-6">
+                <div className="text-center space-y-3">
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Request a Demo
+                  </h2>
+                  <p className="text-gray-600 text-base">
+                    Get started with interactive ads today
+                  </p>
+                </div>
 
-            {/* Client Logos */}
-            <div className="space-y-6">
-              <div className="text-base text-white">
-                Trusted by 400+ companies worldwide
-              </div>
-              
-              <div className="grid grid-cols-3 gap-12 items-center">
-                {/* Top row - 3 logos */}
-                <div className="flex items-center justify-center h-12">
-                  <img 
-                    src="/lovable-uploads/85635f9e-929a-4117-9ef9-2ce5b1507d88.png" 
-                    alt="McDonald's" 
-                    className="h-8 w-auto filter brightness-0 invert"
-                  />
-                </div>
-                <div className="flex items-center justify-center h-12">
-                  <img 
-                    src="/lovable-uploads/eb9dce1b-a19c-4703-9c66-82ee8b1624d7.png" 
-                    alt="MiniClip" 
-                    className="h-8 w-auto filter brightness-0 invert"
-                  />
-                </div>
-                <div className="flex items-center justify-center h-12">
-                  <img 
-                    src="/lovable-uploads/a78883a7-a800-469e-87a7-95ffa64d1dc4.png" 
-                    alt="Rovio" 
-                    className="h-8 w-auto filter brightness-0 invert"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-12 items-center max-w-sm mx-auto">
-                {/* Bottom row - 2 logos */}
-                <div className="flex items-center justify-center h-12">
-                  <img 
-                    src="/lovable-uploads/087297e8-61a8-4f13-bc9f-790f74bcd530.png" 
-                    alt="Supercell" 
-                    className="h-8 w-auto filter brightness-0 invert"
-                  />
-                </div>
-                <div className="flex items-center justify-center h-12">
-                  <img 
-                    src="/lovable-uploads/70cfa843-1b7b-4764-815f-206f0430617f.png" 
-                    alt="Zynga" 
-                    className="h-8 w-auto filter brightness-0 invert"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Demo Form */}
-          <div className="lg:pl-12">
-            <Card className="shadow-2xl border-0 bg-white">
-              <CardContent className="p-8">
-                <div className="space-y-6">
-                  <div className="text-center space-y-3">
-                    <h2 className="text-2xl font-bold text-gray-900">
-                      Request a Demo
-                    </h2>
-                    <p className="text-gray-600 text-base">
-                      Get started with interactive ads today
-                    </p>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                      Email <span className="text-orange-600">*</span>
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="yourname@company.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                      required
+                      className="h-11 border-gray-200 focus:ring-orange-500 focus:border-orange-500"
+                    />
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="space-y-1.5">
-                      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
-                        Email <span className="text-orange-600">*</span>
-                      </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="yourname@company.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        required
-                        className="h-11 border-gray-200 focus:ring-orange-500 focus:border-orange-500"
-                      />
-                    </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="message" className="text-sm font-medium text-gray-700">
+                      Your Message (optional)
+                    </Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell us about your project or any specific requirements"
+                      value={formData.message}
+                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
+                    />
+                  </div>
 
-                   <div className="space-y-1.5">
-  <Label htmlFor="message" className="text-sm font-medium text-gray-700">
-    Your Message (optional)
-  </Label>
-  <Textarea
-    id="message"
-    placeholder="Tell us about your project or any specific requirements"
-    value={formData.message}
-    onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-    className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
-  />
-</div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="hearAboutUs" className="text-sm font-medium text-gray-700">
+                      How did you hear about us? <span className="text-orange-600">*</span>
+                    </Label>
+                    <Textarea
+                      id="hearAboutUs"
+                      placeholder="Let us know how you discovered Playable Factory"
+                      value={formData.hearAboutUs}
+                      onChange={(e) => setFormData(prev => ({ ...prev, hearAboutUs: e.target.value }))}
+                      className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
+                    />
+                  </div>
 
-<div className="space-y-1.5">
-  <Label htmlFor="hearAboutUs" className="text-sm font-medium text-gray-700">
-    How did you hear about us? <span className="text-orange-600">*</span>
-  </Label>
-  <Textarea
-    id="hearAboutUs"
-    placeholder="Let us know how you discovered Playable Factory"
-    value={formData.hearAboutUs}
-    onChange={(e) => setFormData(prev => ({ ...prev, hearAboutUs: e.target.value }))}
-    className="min-h-[80px] border-gray-200 focus:ring-orange-500 focus:border-orange-500"
-  />
-</div>
+                  <div className="flex items-center space-x-2.5">
+                    <Checkbox
+                      id="newsletter"
+                      checked={formData.newsletter}
+                      onCheckedChange={(checked) => setFormData(prev => ({ ...prev, newsletter: checked as boolean }))}
+                      className="data-[state=checked]:bg-orange-600 data-[state=checked]:border-orange-600"
+                    />
+                    <Label htmlFor="newsletter" className="text-sm text-gray-700">
+                      Keep me updated with newsletter and product updates
+                    </Label>
+                  </div>
 
-
-                    <div className="flex items-center space-x-2.5">
-                      <Checkbox
-                        id="newsletter"
-                        checked={formData.newsletter}
-                        onCheckedChange={(checked) => setFormData(prev => ({ ...prev, newsletter: checked as boolean }))}
-                        className="data-[state=checked]:bg-orange-600 data-[state=checked]:border-orange-600"
-                      />
-                      <Label htmlFor="newsletter" className="text-sm text-gray-700">
-                        Keep me updated with newsletter and product updates
-                      </Label>
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 text-base transition-all duration-200 transform hover:scale-[1.02] h-12"
-                    >
-                      Submit Now
-                    </Button>
-                  </form>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                  <Button
+                    type="submit"
+                    className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 text-base transition-all duration-200 transform hover:scale-[1.02] h-12"
+                  >
+                    Submit Now
+                  </Button>
+                </form>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Index;
